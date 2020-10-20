@@ -3,4 +3,5 @@
     <string name="tvf_first">Заболею</string>
     <string name="tv_second">или</string>
     <string name="tv_third">не Заболею?</string>
+    <string name="imun">У вас есть проблемы с иммунитетом?</string>
 </resources>
