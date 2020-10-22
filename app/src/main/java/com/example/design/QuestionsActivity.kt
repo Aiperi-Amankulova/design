@@ -3,6 +3,7 @@ package com.example.design
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_questions.*
+import kotlinx.android.synthetic.main.item_questions.*
 
 class QuestionsActivity : AppCompatActivity() {
 
