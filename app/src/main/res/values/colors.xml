@@ -7,4 +7,7 @@
     <color name="black_text">#0A0909</color>
     <color name="yellow">#EBE100</color>
     <color name="black_lighter">#25282B</color>
+    <color name="red_btn"> #E93C3C</color>
+    <color name="green_btn"> #1AB759 </color>
+
 </resources>
