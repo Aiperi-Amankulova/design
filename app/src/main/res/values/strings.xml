@@ -6,4 +6,7 @@
     <string name="imun">У вас есть проблемы с иммунитетом?</string>
     <string name="yes">Да</string>
     <string name="No">Нет</string>
+    <string name="layout">С каким количеством людей в день вы контактируете оффлайн?</string>
+    <string name="_0">0</string>
+    <string name="_1_5">1-5</string>
 </resources>
