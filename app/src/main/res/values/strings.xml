@@ -12,5 +12,6 @@
     <string name="good">ТАК ДЕРЖАТЬ!</string>
     <string name="_0_10">Ваш риск заболеть составляет \ от 0% до 10%</string>
     <string name="good_pr">Похоже, вы серьезно отнеслись к ситуации и соблюдаете основные меры предосторожности. Продолжайте в том же духе и скоро все закончится!</string>
+    <string name="question_number">%1$d/%2$d</string>
 
 </resources>
