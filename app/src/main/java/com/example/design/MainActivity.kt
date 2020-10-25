@@ -9,16 +9,15 @@ import android.text.style.ForegroundColorSpan
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     private var color = 0
     private var drawable = 0
     private var spannableString: SpannableString? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupListeners()
-
         val bundle = 12
 
         if (bundle < 20) {

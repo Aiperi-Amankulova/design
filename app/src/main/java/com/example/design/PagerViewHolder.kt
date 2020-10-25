@@ -9,29 +9,29 @@ import kotlinx.android.synthetic.main.item_questions.view.*
 
 class PagerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(s: String, position: Int, size: Int, listener: PagerListener) {
-        itemView.tvCount.text = itemView.context.resources.getString(
-            R.string.question_number,
-            position + 1,
-            size
-        )
-        val span = SpannableString("У вас есть ем")
+    itemView.tvCount.text = itemView.context.resources.getString(
+        R.string.question_number,
+        position + 1,
+        size
+    )
+    val span = SpannableString("У вас есть ем")
 
-        span.setSpan(
-            ForegroundColorSpan(itemView.resources.getColor(R.color.yellow)),
-            5,
-            11,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
+    span.setSpan(
+        ForegroundColorSpan(itemView.resources.getColor(R.color.yellow)),
+        5,
+        11,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
 
-        itemView.tvQuestion.text = span
+    itemView.tvQuestion.text = span
 
 
 
-        itemView.buttonNo.setOnClickListener {
-            listener.selectAnswer(false, position)
-        }
-        itemView.buttonYes.setOnClickListener {
-            listener.selectAnswer(true, position)
-        }
+    itemView.btnNo.setOnClickListener {
+        listener.selectAnswer(false, position)
     }
+    itemView.btnYes.setOnClickListener {
+        listener.selectAnswer(true, position)
+    }
+}
 }
