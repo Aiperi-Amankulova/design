@@ -49,7 +49,6 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
         return list
     }
 
-
     override fun selectAnswer(answer: Boolean, position: Int) {
         pager.currentItem += 1
         if (answer) questionResult += 20
@@ -57,6 +56,9 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
         if (position + 1 == adapter.itemCount) {
 //            startActivity()
         }
+    }
+    companion object {
+        const val POINTS = "POINTS"
     }
 
 }

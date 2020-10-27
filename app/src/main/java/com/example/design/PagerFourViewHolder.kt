@@ -11,12 +11,12 @@ class PagerFourViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             position + 1,
             size
         )
-
-        itemView.btnNo.setOnClickListener {
-            listener.selectAnswer(false, position)
-        }
-        itemView.btnYes.setOnClickListener {
-            listener.selectAnswer(true, position)
-        }
+//
+//        itemView.btnNo.setOnClickListener {
+//            listener.selectAnswer(false, position)
+//        }
+//        itemView.btnYes.setOnClickListener {
+//            listener.selectAnswer(true, position)
+//        }
     }
 }
