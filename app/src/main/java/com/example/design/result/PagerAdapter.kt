@@ -1,8 +1,9 @@
-package com.example.design
+package com.example.design.result
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.design.R
 
 class PagerAdapter(private val listener: PagerListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -46,5 +47,4 @@ class PagerAdapter(private val listener: PagerListener) :
         const val TWO_QUESTIONS = 12
         const val FOUR_QUESTIONS = 13
     }
-
 }

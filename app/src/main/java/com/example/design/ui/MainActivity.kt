@@ -1,4 +1,4 @@
-package com.example.design
+package com.example.design.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import com.example.design.result.QuestionsActivity
+import com.example.design.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,17 +16,19 @@ class MainActivity : AppCompatActivity() {
     private var drawable = 0
     private var spannableString: SpannableString? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupListeners()
+
         val bundle = 12
 
         if (bundle < 20) {
             color = R.color.colorPrimary
             drawable = R.drawable.bg_white_card
             spannableString = getSPan1()
-        } else if (bundle in 21..39){
+        } else if (bundle in 21..39) {
             color = R.color.colorPrimary
             drawable = R.drawable.bg_white_card
             spannableString = getSPan1()

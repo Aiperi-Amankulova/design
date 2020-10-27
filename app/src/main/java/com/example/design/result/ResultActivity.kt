@@ -1,12 +1,12 @@
-package com.example.design
+package com.example.design.result
 
-import android.graphics.Color.green
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import androidx.appcompat.app.AppCompatActivity
-import com.example.design.QuestionsActivity.Companion.POINTS
+import com.example.design.R
+import com.example.design.result.QuestionsActivity.Companion.POINTS
 import kotlinx.android.synthetic.main.activity_answers.*
 
 class ResultActivity : AppCompatActivity() {

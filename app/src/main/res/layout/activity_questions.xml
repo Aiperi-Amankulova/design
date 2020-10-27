@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bcg"
-    tools:context=".QuestionsActivity">
+    tools:context=".result.QuestionsActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
