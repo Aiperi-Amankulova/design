@@ -46,12 +46,14 @@
                 android:text="@string/layout"
                 android:textColor="@color/black_lighter"
                 android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvCount" />
 
             <Button
 
                 android:id="@+id/button"
-                android:layout_width="140dp"
+                android:layout_width="125dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="130dp"
@@ -67,7 +69,7 @@
 
             <Button
                 android:id="@+id/btnOne"
-                android:layout_width="140dp"
+                android:layout_width="125dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="110dp"
                 android:layout_marginRight="20dp"
@@ -82,13 +84,13 @@
 
             <Button
                 android:id="@+id/btnFive"
-                android:layout_width="140dp"
+                android:layout_width="125dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_orange_button"
-                android:text="@string/No"
+                android:text="@string/_5_10"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -97,13 +99,14 @@
 
             <Button
                 android:id="@+id/btnTen"
-                android:layout_width="140dp"
+                android:layout_width="125dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_red_button"
-                android:text="@string/No"
+                android:text="@string/_10_15"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
