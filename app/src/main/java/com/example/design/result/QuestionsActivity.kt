@@ -41,13 +41,11 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
     private fun generateData(): ArrayList<String> {
         val list = arrayListOf<String>()
 
-        list.add(getString(R.string.app_name))
-        list.add(getString(R.string.app_name))
-        list.add(getString(R.string.app_name))
-        list.add(getString(R.string.app_name))
-        list.add(getString(R.string.app_name))
-        list.add(getString(R.string.app_name))
-
+        list.add(getString(R.string.first_cart))
+        list.add(getString(R.string.second_cart))
+        list.add(getString(R.string.third_cart))
+        list.add(getString(R.string.fourth_cart))
+        list.add(getString(R.string.fifth_cart))
 
         return list
     }
