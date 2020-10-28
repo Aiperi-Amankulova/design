@@ -3,6 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#007EFF</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorBcg">#007EFF</color>
+
 
     <color name="black_text">#0A0909</color>
     <color name="yellow">#EBE100</color>

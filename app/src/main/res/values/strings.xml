@@ -3,7 +3,12 @@
     <string name="tvf_first">Заболею</string>
     <string name="tv_second">или</string>
     <string name="tv_third">не Заболею?</string>
-    <string name="imun">У вас есть проблемы с иммунитетом?</string>
+    <string name="first_cart">У вас есть проблемы с иммунитетом?</string>
+    <string name="second_cart">У вас есть хронические заболевания?</string>
+    <string name="third_cart">Контактируют ли эти люди с другими людьми?</string>
+    <string name="fourth_cart">Используете ли вы средства защиты при выходе из дома?</string>
+    <string name="fifth_cart">Соблюдаете ли вы карантин?</string>
+
     <string name="yes">Да</string>
     <string name="No">Нет</string>
     <string name="layout">С каким количеством людей в день вы контактируете оффлайн?</string>
@@ -33,4 +38,6 @@
     <string name="big_desc_yellow">Ваш риск заболеть составляет\nот 30% до 50%</string>
     <string name="big_desc_orange">Ваш риск заболеть составляет\nот 50% до 70%</string>
     <string name="big_desc_red">Ваш риск заболеть составляет\nот 70% до 100%</string>
+    <string name="_5_10">5-10</string>
+    <string name="_10_15">10-15</string>
 </resources>
