@@ -2,14 +2,18 @@ package com.example.design.result
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.design.R
+import com.example.design.ui.AnswerActivity
+import com.example.design.utils.MainViewModel
 import com.example.design.utils.PagerDecorator
 import kotlinx.android.synthetic.main.activity_questions.*
 
-class QuestionsActivity : AppCompatActivity(), PagerListener {
+class QuestionActivity : AppCompatActivity(), PagerListener {
 
-    private val adapter by lazy {
+    private val adapter by lazy{
         PagerAdapter(this)
     }
 
@@ -18,7 +22,7 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
-        setupViewPager()
+        setupViewpager()
     }
 
     override fun onBackPressed() {
@@ -29,43 +33,44 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
         }
     }
 
-    private fun setupViewPager() {
-        pager.adapter = adapter
-        pager.isUserInputEnabled = false
-        pager.offscreenPageLimit = 6
-        pager.addItemDecoration(PagerDecorator())
-
-        adapter.update(generateData())
-    }
-
     private fun generateData(): ArrayList<String> {
         val list = arrayListOf<String>()
-
         list.add(getString(R.string.first_cart))
         list.add(getString(R.string.second_cart))
+        list.add(getString(R.string.layout))
         list.add(getString(R.string.third_cart))
         list.add(getString(R.string.fourth_cart))
         list.add(getString(R.string.fifth_cart))
-
         return list
     }
 
+    private fun setupViewpager() {
+        pager.adapter = adapter
+        adapter.update(generateData())
+        pager.isUserInputEnabled = false
+        pager.offscreenPageLimit = 6
+        pager.addItemDecoration(PagerDecorator())
+    }
 
     override fun selectAnswer(answer: Boolean, position: Int) {
-        if (answer) questionResult += 20
+        if (position >= 4 && !answer)
+            questionResult += 20
+        if (position < 4 && answer) questionResult += 20
+        if (!answer) questionResult += 0
+        Log.d("jbuvuh", questionResult.toString())
+
         nextPage(position)
     }
 
-    override fun selectAnswerFourQuestions(points: Int, position: Int) {
+    override fun selectAnswerFourQuestions(position: Int, points: Int) { // position: Int, points: Int все из Interface listener
         questionResult += points
         nextPage(position)
     }
 
-    private fun nextPage(position: Int) {
-        pager.currentItem += 1
-
-        if (position + 1 == adapter.itemCount) {
-            val intent = Intent(this, ResultActivity::class.java)
+    private fun nextPage(position: Int){
+        pager.currentItem += 1  // перевод на другую страницу при клике да нет
+        if (position + 1 == adapter.itemCount)  { // для прехода с вопрос активити на ответ активити
+            val intent = Intent(this, AnswerActivity :: class.java)
             intent.putExtra(POINTS, questionResult)
             startActivity(intent)
             finish()
@@ -73,6 +78,6 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
     }
 
     companion object {
-        const val POINTS = "POINTS"
+        const val  POINTS = "POINTS"
     }
 }
