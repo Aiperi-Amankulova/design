@@ -3,17 +3,15 @@ package com.example.design.result
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.design.R
 import com.example.design.ui.AnswerActivity
-import com.example.design.utils.MainViewModel
 import com.example.design.utils.PagerDecorator
 import kotlinx.android.synthetic.main.activity_questions.*
 
 class QuestionActivity : AppCompatActivity(), PagerListener {
 
-    private val adapter by lazy{
+    private val adapter by lazy {
         PagerAdapter(this)
     }
 
@@ -62,15 +60,15 @@ class QuestionActivity : AppCompatActivity(), PagerListener {
         nextPage(position)
     }
 
-    override fun selectAnswerFourQuestions(position: Int, points: Int) { // position: Int, points: Int все из Interface listener
+    override fun selectAnswerFourQuestions(position: Int, points: Int) {
         questionResult += points
         nextPage(position)
     }
 
-    private fun nextPage(position: Int){
-        pager.currentItem += 1  // перевод на другую страницу при клике да нет
-        if (position + 1 == adapter.itemCount)  { // для прехода с вопрос активити на ответ активити
-            val intent = Intent(this, AnswerActivity :: class.java)
+    private fun nextPage(position: Int) {
+        pager.currentItem += 1
+        if (position + 1 == adapter.itemCount) {
+            val intent = Intent(this, AnswerActivity::class.java)
             intent.putExtra(POINTS, questionResult)
             startActivity(intent)
             finish()
@@ -78,6 +76,6 @@ class QuestionActivity : AppCompatActivity(), PagerListener {
     }
 
     companion object {
-        const val  POINTS = "POINTS"
+        const val POINTS = "POINTS"
     }
 }
